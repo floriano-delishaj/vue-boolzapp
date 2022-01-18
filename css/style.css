@@ -1,0 +1,153 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin:0;
+}
+
+input {
+    margin:0;
+	border:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:1;
+    outline: 0;
+	font-size:13px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    height: 700px;
+}
+
+.sidebar {
+    width: 40%;
+    background-color: #fbfafa;
+    border-right: 1px solid #6d7679;
+}
+
+.sidebar .header-sidebar,
+.main .main-header {
+    height: 60px;
+    background-color: #e9eaea;
+}
+
+.sidebar .header-sidebar-right li,
+.main .main-header-right li {
+    display: inline;
+    font-size: 20px;
+}
+
+.sidebar .header-sidebar-right li i,
+.main .main-header-right li i {
+    color: #b1b1b0;
+}
+
+.sidebar .notifications {
+    height: 70px;
+    background-color: #8ddafc;
+}
+
+.sidebar .notifications a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #f2fbfe;
+}
+
+.sidebar .notifications a i {
+    font-size: 20px;
+    color: #8ddafc;
+}
+
+.sidebar .notifications .notifications-text p:first-child {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sidebar .notifications .notifications-text p:last-child {
+    font-size: 12px;
+    text-decoration: underline;
+    color: #6d7679;
+}
+
+.sidebar .users {
+    background-color: #fbfafa;
+}
+
+.sidebar .users .search-users {
+    border: 0.5px solid #ccc;
+}
+
+.sidebar .users .search-users a i {
+    color:#b1b1b0;
+}
+
+.sidebar .users li {
+    height: 80px;
+}
+
+.sidebar .users img,
+.sidebar .header-sidebar-left img,
+.main .main-header-left img {
+    border-radius: 50%;
+    height: 60px;
+}
+
+.main {
+    width: 60%;
+    height: 100%;
+}
+
+.main-header .main-header-left p:first-child {
+    font-size: 14px;
+}
+
+.main-header .main-header-left p:last-child {
+    font-size: 12px;
+    color:#6d7679;
+}
+
+.main .main-chat {
+    background: url(/img/mine.jpg);
+    height: 580px;
+}
+
+.main .main-chat .container-chat .box-chat {
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.main .main-chat .container-chat .box-chat.me {
+    background-color: #d5f9ba;
+    align-self: end;
+}
+
+.main .main-chat .container-chat .box-chat p:first-child{
+    font-size: 14px;
+}
+
+.main .main-chat .container-chat .box-chat p:last-child{
+    font-size: 9px;
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+}
+
+.main .chat-input {
+    height: 60px;
+    width: 100%;
+    background: red;
+}
