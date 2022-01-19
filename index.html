@@ -77,12 +77,16 @@
                                 <a class="px-3">
                                     <i class="fas fa-search"></i>
                                 </a>
-                                <input class="w-100" type="text" placeholder="Cerca o inizia una nuova chat">
+                                <input class="w-100"
+                                    type="text"
+                                    placeholder="Cerca o inizia una nuova chat"
+                                    v-model="search"
+                                >
                             </div>
     
                             <ul>
                                 <li class="d-flex pl-3"
-                                    v-for="(user, i) in contacts"
+                                    v-for="(user, i) in filteredUsers"
                                     @click="thisChat(i)"
                                 >
                                     <div class="user-avatar">

@@ -7,6 +7,7 @@ new Vue({
     data: {
         currentIndex: 0,
         inputChat: '',
+        search: '',
         contacts: [
             {
                 name: 'Michele',
@@ -77,7 +78,7 @@ new Vue({
             },
             {
                 name: 'Luisa',
-                avatar: 'img/avatar_4.jpg',
+                avatar: 'img/avatar_6.jpg',
                 visible: true,
                 messages: [
                     {
@@ -119,5 +120,14 @@ new Vue({
             this.inputChat = ''
 
         },
+
+    },
+    computed: {
+        filteredUsers: function() {
+            return this.contacts.filter((user) => {
+                return user.name.toLowerCase().match(this.search)
+            })
+        }
     }
+
 })
