@@ -101,6 +101,7 @@ input {
 }
 
 .sidebar .users {
+    height: 570px;
     background-color: #fbfafa;
     overflow-y: auto;
 }
@@ -145,7 +146,7 @@ input {
 .main .main-chat {
     background: url(/img/mine.jpg);
     height: 580px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .main .main-chat .container-chat .box-chat {
@@ -153,7 +154,29 @@ input {
     border-radius: 10px;
     position: relative;
     width: 40%;
+    word-wrap: break-word;
+    position: relative;
 }
+
+.main .main-chat .container-chat .box-chat .dropmenu-message {
+    width: 120px;
+    height: 70px;
+    position: absolute;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    z-index: 1;
+}
+
+.main .main-chat .container-chat .box-chat .dropmenu-message .toggle-chat {
+    font-size: 14px;
+    width: 100%;
+}
+
+.main .main-chat .container-chat .box-chat .dropmenu-message .toggle-chat:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+} 
 
 .main .main-chat .container-chat .box-chat.me {
     background-color: #d5f9ba;
