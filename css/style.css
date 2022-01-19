@@ -47,6 +47,8 @@ input {
     transform: translate(-50%, -50%);
 }
 
+/* ----- SIDEBAR ----- */
+
 .sidebar {
     width: 40%;
     background-color: #fbfafa;
@@ -122,6 +124,10 @@ input {
     height: 60px;
 }
 
+/* ----- /SIDEBAR ----- */
+
+/* ----- MAIN ----- */
+
 .main {
     width: 60%;
     height: 100%;
@@ -176,11 +182,6 @@ input {
     background-color: #f3ede9;
 }
 
-/* .main .chat-input-left,
-.main .chat-input-right {
-
-} */
-
 .main .chat-input-left a i,
 .main .chat-input-right a i {
     font-size: 25px;
@@ -198,3 +199,5 @@ input {
     margin: 10px 0;
     background-color: #fff;
 }
+
+/* ----- /MAIN ----- */

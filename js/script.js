@@ -5,6 +5,8 @@ Replica della grafica con la possibilità di avere messaggi scritti dall’utent
 new Vue({
     el: '#app',
     data: {
+        currentIndex: 0,
+        inputChat: '',
         contacts: [
             {
                 name: 'Michele',
@@ -93,4 +95,23 @@ new Vue({
         ]
         
     },
+    methods: {
+        thisChat: function(index) {
+            this.currentIndex = index
+        },
+
+        addItem: function() {
+            if (this.inputChat !== '') {
+                this.contacts[this.currentIndex].messages.push({
+                    date: '11/01/2020 18:21:10',
+                    text: this.inputChat,
+                    status: 'sent'
+                })
+
+                
+            }
+
+            this.inputChat = ''
+        }
+    }
 })
