@@ -107,11 +107,17 @@ new Vue({
                     text: this.inputChat,
                     status: 'sent'
                 })
-
-                
+                setTimeout( () => {
+                    this.contacts[this.currentIndex].messages.push({
+                        date: '11/01/2020 18:21:10',
+                        text: 'ok',
+                        status: 'received'
+                    })
+                }, 1000)
             }
 
             this.inputChat = ''
-        }
+
+        },
     }
 })
