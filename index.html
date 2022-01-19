@@ -12,103 +12,163 @@
 </head>
 <body>
     <div id="app">
-        <div class="container-fluid d-flex justify-content-center align-items-center">
-            <div class="container d-flex">
-                <!--Sidebar-->
-                <div class="sidebar">
-
-                    <div class="header-sidebar d-flex">
-
-                        <div class="header-sidebar-left d-flex w-50 align-items-center">
-                            <img class="py-1 pl-1" src="/img/avatar_io.jpg" alt="">
-                            <p class="pl-2">Nome Utente</p>
+        <div class="container-fluid">
+            <div class="fluid-up"></div>
+            <div class="fluid-down">
+                <div class="container d-flex">
+                    <!--Sidebar-->
+                    <div class="sidebar">
+    
+                        <div class="header-sidebar d-flex">
+    
+                            <div class="header-sidebar-left
+                                        d-flex
+                                        w-50
+                                        align-items-center"
+                            >
+                                <img class="py-1 pl-1" src="/img/avatar_io.jpg" alt="">
+                                <p class="pl-2">Nome Utente</p>
+                            </div>
+    
+                            <div class="header-sidebar-right
+                                        d-flex
+                                        justify-content-end
+                                        align-items-center
+                                        w-50"
+                            >
+                                <ul>
+                                    <li class="mr-3">
+                                        <i class="fas fa-circle-notch"></i>
+                                    </li>
+                                    <li class="mr-3">
+                                        <i class="fas fa-comment-alt"></i>
+                                    </li>
+                                    <li class="mr-4">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </li>
+                                </ul>
+                            </div>
+    
                         </div>
-
-                        <div class="header-sidebar-right d-flex justify-content-end align-items-center w-50">
-                            <ul>
-                                <li class="mr-3">
-                                    <i class="fas fa-circle-notch"></i>
-                                </li>
-                                <li class="mr-3">
-                                    <i class="fas fa-comment-alt"></i>
-                                </li>
-                                <li class="mr-4">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                    <div class="notifications d-flex align-items-center">
-                        <a class="d-flex justify-content-center align-items-center ml-3">
-                            <i class="fas fa-bell-slash"></i>
-                        </a>
-                        <div class="notifications-text ml-2">
-                            <p>Ricevi notifiche di nuovi messaggi</p>
-                            <p>Attiva notifiche desktop</p>
-                        </div>
-                    </div>
-
-                    <div class="users">
-
-                        <div class="search-users d-flex align-items-center m-2 py-1">
-                            <a class="px-3">
-                                <i class="fas fa-search"></i>
+    
+                        <div class="notifications d-flex align-items-center">
+                            <a class="d-flex
+                                      justify-content-center
+                                      align-items-center
+                                      ml-3"
+                            >
+                                <i class="fas fa-bell-slash"></i>
                             </a>
-                            <input class="w-100" type="text" placeholder="Cerca o inizia una nuova chat">
-                        </div>
-
-                        <ul>
-                            <li class="d-flex pl-3" v-for="user in contacts">
-                                <div class="user-avatar">
-                                    <img class="my-1" :src="user.avatar" alt="">
-                                </div>
-                                <div class="user-name">
-                                    <span class="py-1 pl-2">{{user.name}}</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!--/Sidebar-->
-
-                <!--Main-->
-                <div class="main">
-                    <div class="main-header d-flex w-100">
-                        <div class="main-header-left d-flex w-50 align-items-center">
-                            <img class="py-1 pl-1" src="/img/avatar_1.jpg" alt="">
-                            <div class="pl-2">
-                                <p>Michele</p>
-                                <p>Ultimo accesso oggi alle</p>
+                            <div class="notifications-text ml-2">
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+                                <p>Attiva notifiche desktop</p>
                             </div>
                         </div>
-                        <div class="main-header-right d-flex justify-content-end align-items-center w-50">
-                            <ul>
-                                <li class="mr-3">
+    
+                        <div class="users">
+    
+                            <div class="search-users
+                                        d-flex align-items-center
+                                        m-2
+                                        py-1"
+                            >
+                                <a class="px-3">
                                     <i class="fas fa-search"></i>
-                                </li>
-                                <li class="mr-3">
-                                    <i class="fas fa-paperclip"></i>
-                                </li>
-                                <li class="mr-3">
-                                    <i class="fas fa-ellipsis-v"></i>
+                                </a>
+                                <input class="w-100" type="text" placeholder="Cerca o inizia una nuova chat">
+                            </div>
+    
+                            <ul>
+                                <li class="d-flex pl-3" v-for="user in contacts">
+                                    <div class="user-avatar">
+                                        <img class="my-1" :src="user.avatar" alt="">
+                                    </div>
+                                    <div class="user-name">
+                                        <span class="py-1 pl-2">{{user.name}}</span>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="main-chat">
-                        <div class="container-chat d-flex py-4 px-5">
-                            <div class="box-chat me">
-                                <p>Hai portato a spasso il cane?</p>
-                                <p>10/01/2020 15:30:55</p>
+                    <!--/Sidebar-->
+    
+                    <!--Main-->
+                    <div class="main">
+                        <div class="main-header d-flex w-100">
+                            <div class="main-header-left
+                                        d-flex
+                                        w-50
+                                        align-items-center"
+                            >
+                                <img class="py-1 pl-1" src="/img/avatar_1.jpg" alt="">
+                                <div class="pl-2">
+                                    <p>Michele</p>
+                                    <p>Ultimo accesso oggi alle</p>
+                                </div>
+                            </div>
+                            <div class="
+                                        main-header-right
+                                        d-flex
+                                        justify-content-end
+                                        align-items-center
+                                        w-50"
+                            >
+                                <ul>
+                                    <li class="mr-3">
+                                        <i class="fas fa-search"></i>
+                                    </li>
+                                    <li class="mr-3">
+                                        <i class="fas fa-paperclip"></i>
+                                    </li>
+                                    <li class="mr-3">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="main-chat">
+                            <div class="container-chat py-4 px-5">
+    
+                                <div v-for="text in contacts[0].messages"
+                                class="d-flex mb-2"
+                                :class="text.status === 'sent' ? 'justify-content-end' : ''"
+                                >
+                                    <div class="box-chat"
+                                    :class="text.status === 'sent' ? 'me' : 'you'"
+                                    >
+                                        <p>{{text.text}}</p>
+                                        <p>{{text.date}}</p>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                        <div class="chat-input
+                                    d-flex
+                                    align-items-center
+                                    justify-content-between"
+                        >
+                            <div class="chat-input-left">
+                                <a>
+                                    <i class="far fa-smile"></i>
+                                </a>
+                            </div>
+                            <div class="chat-input-middle">
+                                <input class="pl-2" type="text-area" placeholder="Scrivi un messaggio">
+                            </div>
+                            <div class="chat-input-right">
+                                <a>
+                                    <i class="fas fa-microphone"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="chat-input"></div>
+                    <!--/Main-->
                 </div>
-                <!--/Main-->
             </div>
+
         </div>
     </div>
 

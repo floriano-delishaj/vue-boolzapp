@@ -21,14 +21,30 @@ input {
 	font-size:13px;
 }
 
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
+.container-fluid {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.container-fluid .fluid-up {
+    height: 20%;
+    width: 100%;
+    background-color: #059688;
+}
+
+.container-fluid .fluid-down {
+    height: 80%;
+    width: 100%;
+    background-color: #dadbd4;
 }
 
 .container {
     height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .sidebar {
@@ -84,6 +100,7 @@ input {
 
 .sidebar .users {
     background-color: #fbfafa;
+    overflow-y: auto;
 }
 
 .sidebar .users .search-users {
@@ -122,21 +139,27 @@ input {
 .main .main-chat {
     background: url(/img/mine.jpg);
     height: 580px;
+    overflow-y: scroll;
 }
 
 .main .main-chat .container-chat .box-chat {
     padding: 10px;
     border-radius: 10px;
     position: relative;
+    width: 40%;
 }
 
 .main .main-chat .container-chat .box-chat.me {
     background-color: #d5f9ba;
-    align-self: end;
+}
+
+.main .main-chat .container-chat .box-chat.you {
+    background-color: #ffffff;
 }
 
 .main .main-chat .container-chat .box-chat p:first-child{
     font-size: 14px;
+    padding-bottom: 6px;
 }
 
 .main .main-chat .container-chat .box-chat p:last-child{
@@ -144,10 +167,34 @@ input {
     position: absolute;
     bottom: 0;
     right: 7px;
+    color: #999;
 }
 
 .main .chat-input {
     height: 60px;
     width: 100%;
-    background: red;
+    background-color: #f3ede9;
+}
+
+/* .main .chat-input-left,
+.main .chat-input-right {
+
+} */
+
+.main .chat-input-left a i,
+.main .chat-input-right a i {
+    font-size: 25px;
+    margin: 0 25px
+}
+
+.main .chat-input-middle {
+    flex-grow: 1;
+}
+
+.main .chat-input-middle input {
+    width: 100%;
+    border-radius: 10px;
+    height: 40px;
+    margin: 10px 0;
+    background-color: #fff;
 }
