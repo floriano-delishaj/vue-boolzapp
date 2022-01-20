@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>Boolzap</title>
 </head>
@@ -90,8 +91,9 @@
 
                             <ul>
                                 <li class="d-flex pl-3"
-                                    v-for="(user, i) in filteredUsers"
+                                    v-for="(user, i) in contacts"
                                     @click="thisChat(i)"
+                                    v-if="user.name.toLowerCase().includes(search)"
                                 >
                                     <div class="user-avatar">
                                         <img class="my-1" :src="user.avatar" alt="">
@@ -163,7 +165,8 @@
                                                 <div class="toggle-chat">Message info</div>
                                                 <div class="toggle-chat">Delete message</div>
                                             </div>
-                                        </div> -->
+                                        </div>
+                                        -->
                                         <p>{{text.text}}</p>
                                         <p>{{text.date}}</p>
                                     </div>

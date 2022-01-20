@@ -65,7 +65,7 @@ new Vue({
                         status: 'received'
                     },
                     {
-                        date: '28/03/2020 10:20:10',
+                        date: '28/03/2020 10:10:40',
                         text: 'Sicuro di non aver sbagliato chat?',
                         status: 'sent'
                     },
@@ -104,13 +104,13 @@ new Vue({
         addItem: function() {
             if (this.inputChat !== '') {
                 this.contacts[this.currentIndex].messages.push({
-                    date: '11/01/2020 18:21:10',
+                    date: this.getThisDate(),
                     text: this.inputChat,
                     status: 'sent'
                 })
                 setTimeout( () => {
                     this.contacts[this.currentIndex].messages.push({
-                        date: '11/01/2020 18:21:10',
+                        date: this.getThisDate(),
                         text: 'ok',
                         status: 'received'
                     })
@@ -121,13 +121,9 @@ new Vue({
 
         },
 
-    },
-    computed: {
-        filteredUsers: function() {
-            return this.contacts.filter((user) => {
-                return user.name.toLowerCase().match(this.search)
-            })
+        getThisDate: function() {
+            return dayjs().format('DD/MM/YYYY HH:mm:ss')
         }
-    }
+    },
 
 })
